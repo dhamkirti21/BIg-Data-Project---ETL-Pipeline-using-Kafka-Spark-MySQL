@@ -12,19 +12,19 @@ The design ensures **fault tolerance**, **checkpointing**, and **safe re-runs** 
 
 ## 🏗️ Architecture Overview
 
-CSV Files
-↓
-Kafka Producers
-↓
-Kafka Topics
-↓
-Spark Structured Streaming
-↓
-Parquet (Staging Layer)
-↓
-Spark Batch Job
-↓
-MySQL
+CSV Files 
+➡
+Kafka Producers 
+➡
+Kafka Topics 
+➡
+Spark Structured Streaming 
+➡
+Parquet (Staging Layer) 
+➡
+Spark Batch Job 
+➡
+MySQL 
 
 
 
@@ -43,6 +43,7 @@ MySQL
 
 ## 📁 Project Structure
 
+```text
 CCEE_BigDataProject/
 │
 ├── Dataset/
@@ -66,8 +67,7 @@ CCEE_BigDataProject/
 ├── checkpoint/
 ├── pipeline.sh
 └── README.md
-
-
+```
 
 ---
 
@@ -97,7 +97,7 @@ CCEE_BigDataProject/
 ### Start the streaming pipeline
 ```bash
 bash pipeline.sh
-
+```
 
 
 ## 🔁 Features
@@ -108,14 +108,14 @@ bash pipeline.sh
 - Scalable architecture
 
 
-##📊 Use Cases
+## 📊 Use Cases
 
--Retail sales analytics
--Customer behavior analysis
--Product category performance
--Transaction trend analysis
+- Retail sales analytics
+- Customer behavior analysis
+- Product category performance
+- Transaction trend analysis
 
 
-#👤 Authors
+# 👤 Authors
 1. Yuvaraj Kate (yuvarajkate1740@gmail.com)
 2. Dhamkirti Sisodia (dksisodia002@gmail.com)
