@@ -1,7 +1,6 @@
 #!/bin/bash
 
-source ~/unset_jupyter.sh 
-
+source ~/unset_jupyter.sh
 
 PROJECT_HOME=$(pwd)
 KAFKA_HOME=$HOME/kafka
@@ -23,7 +22,6 @@ exec bash
 "
 
 sleep 15
-
 
 echo "Pushing customers..."
 gnome-terminal --title="Customers Producer" -- bash -c "
@@ -56,4 +54,20 @@ spark-submit \
 $PROJECT_HOME/spark_streaming_job/streaming_job.py;
 exec bash
 "
+
+# -------------------------------------------------
+# WAIT for streaming to write parquet
+# -------------------------------------------------
+echo "Waiting for parquet files to be generated..."
+sleep 90
+
+# -------------------------------------------------
+# PARQUET → MYSQL (Batch Job)
+# -------------------------------------------------
+echo "Loading parquet data into MySQL..."
+spark-submit \
+--jars $HOME/spark/jars/mysql-connector-java-5.1.49.jar \
+$PROJECT_HOME/spark_batch/parquet_to_mysql_job.py
+
+echo "Pipeline completed successfully."
 
