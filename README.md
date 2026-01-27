@@ -12,19 +12,19 @@ The design ensures **fault tolerance**, **checkpointing**, and **safe re-runs** 
 
 ## 🏗️ Architecture Overview
 
-CSV Files \n
-↓ \n
-Kafka Producers \n
-↓ \n
-Kafka Topics \n
-↓ \n
-Spark Structured Streaming \n
-↓ \n
-Parquet (Staging Layer) \n
-↓ \n
-Spark Batch Job \n
-↓ \n
-MySQL \n
+CSV Files 
+➡
+Kafka Producers 
+➡
+Kafka Topics 
+➡
+Spark Structured Streaming 
+➡
+Parquet (Staging Layer) 
+➡
+Spark Batch Job 
+➡
+MySQL 
 
 
 
