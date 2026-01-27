@@ -69,5 +69,14 @@ spark-submit \
 --jars $HOME/spark/jars/mysql-connector-java-5.1.49.jar \
 $PROJECT_HOME/spark_batch/parquet_to_mysql_job.py
 
+
+# ------------------------------
+# Upload to S3
+# ------------------------------
+echo "Uploading data to S3..."
+$PROJECT_HOME/scripts/upload_to_s3.sh
+
+echo "PIPELINE EXECUTION COMPLETED"
+
 echo "Pipeline completed successfully."
 
