@@ -9,6 +9,7 @@ The design focuses on fault tolerance, checkpointing, re-runnable execution, and
 
 ## 🏗️ Architecture Overview
 
+```text
 CSV Files
 → Kafka Producers
 → Kafka Topics
@@ -17,6 +18,8 @@ CSV Files
 → Spark Batch Jobs
   ├── MySQL (Transactional Analytics)
   └── AWS S3 (Reporting / BI Storage)
+```
+![ChatGPT Image Feb 1, 2026, 10_30_34 PM](https://github.com/user-attachments/assets/55a8b140-7210-42e6-8e3f-48c5e5abd501)
 
 
 ## 🧰 Technology Stack
